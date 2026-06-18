@@ -29,18 +29,18 @@ const meshMapOf = () => (mode === 'real' ? meshMapReal : meshMapSchematic);
 
 function getActiveMeshes(partId) {
   if (mode === 'real') {
-    const layer = getPartLayer(partId);
-    return layer === 'skeleton'
-      ? (meshMapReal.get(partId)      || [])
-      : (meshMapSchematic.get(partId) || []);
+    // Prefer real STL for any layer; fall back to schematic for non-skeleton
+    if (meshMapReal.has(partId)) return meshMapReal.get(partId);
+    if (getPartLayer(partId) !== 'skeleton') return meshMapSchematic.get(partId) || [];
+    return [];
   }
   return meshMapSchematic.get(partId) || [];
 }
 
 function isModeledHybrid(id) {
   if (mode === 'real') {
-    const layer = getPartLayer(id);
-    return layer === 'skeleton' ? meshMapReal.has(id) : meshMapSchematic.has(id);
+    return meshMapReal.has(id) ||
+      (getPartLayer(id) !== 'skeleton' && meshMapSchematic.has(id));
   }
   return meshMapSchematic.has(id);
 }
@@ -270,15 +270,17 @@ function showInfoPanelEmpty() {
 // ── Layer visibility ───────────────────────────────────────────
 function applyLayerVisibility() {
   if (mode === 'real') {
-    // Real mode: skeleton from STL, soft tissues from schematic geometry
+    // Show real STL for anything that has one (any layer)
     meshMapReal.forEach((meshes, partId) => {
       const visible = isLayerVisible(getPartLayer(partId));
       meshes.forEach(m => { m.visible = visible; });
     });
+    // Show schematic only for non-skeleton parts without a real STL
     meshMapSchematic.forEach((meshes, partId) => {
       const layer = getPartLayer(partId);
-      // Hide schematic skeleton (real STL is used instead); show other layers normally
-      const visible = layer !== 'skeleton' && isLayerVisible(layer);
+      const visible = layer !== 'skeleton'
+        && !meshMapReal.has(partId)
+        && isLayerVisible(layer);
       meshes.forEach(m => { m.visible = visible; });
     });
     // Hide ghost body in real mode (STL bones serve as reference)
@@ -512,14 +514,17 @@ function enterMode(target) {
   if (schematicGroup) schematicGroup.visible = true;
   if (realGroup)      realGroup.visible      = (mode === 'real');
 
-  // In real mode: click real bones + schematic soft tissues; in schematic: all schematic
+  // In real mode: all real STL meshes + schematic fallback for non-skeleton without real STL
   if (mode === 'real') {
-    const realBones = getClickableMeshes(realGroup);
-    const softTissue = [];
+    const realMeshes = getClickableMeshes(realGroup);
+    const schematicFallback = [];
     meshMapSchematic.forEach((meshes, partId) => {
-      if (getPartLayer(partId) !== 'skeleton') softTissue.push(...meshes);
+      const layer = getPartLayer(partId);
+      if (layer !== 'skeleton' && !meshMapReal.has(partId)) {
+        schematicFallback.push(...meshes);
+      }
     });
-    clickableMeshes = [...realBones, ...softTissue];
+    clickableMeshes = [...realMeshes, ...schematicFallback];
   } else {
     clickableMeshes = getClickableMeshes(schematicGroup);
   }

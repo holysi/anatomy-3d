@@ -451,6 +451,906 @@
       "file": "FMA53656.stl",
       "part": "palatine_bone",
       "fma": "FMA53656"
+    },
+    {
+      "file": "FMA7486.stl",
+      "part": "sternum",
+      "fma": "FMA7486"
+    },
+    {
+      "file": "FMA7487.stl",
+      "part": "sternum",
+      "fma": "FMA7487"
+    },
+    {
+      "file": "FMA7488.stl",
+      "part": "sternum",
+      "fma": "FMA7488"
+    },
+    {
+      "file": "FMA24435.stl",
+      "part": "carpals_r",
+      "fma": "FMA24435"
+    },
+    {
+      "file": "FMA24437.stl",
+      "part": "carpals_r",
+      "fma": "FMA24437"
+    },
+    {
+      "file": "FMA24439.stl",
+      "part": "carpals_r",
+      "fma": "FMA24439"
+    },
+    {
+      "file": "FMA24441.stl",
+      "part": "carpals_r",
+      "fma": "FMA24441"
+    },
+    {
+      "file": "FMA24443.stl",
+      "part": "carpals_r",
+      "fma": "FMA24443"
+    },
+    {
+      "file": "FMA23725.stl",
+      "part": "carpals_r",
+      "fma": "FMA23725"
+    },
+    {
+      "file": "FMA24446.stl",
+      "part": "carpals_r",
+      "fma": "FMA24446"
+    },
+    {
+      "file": "FMA24448.stl",
+      "part": "carpals_r",
+      "fma": "FMA24448"
+    },
+    {
+      "file": "FMA24436.stl",
+      "part": "carpals_l",
+      "fma": "FMA24436"
+    },
+    {
+      "file": "FMA24438.stl",
+      "part": "carpals_l",
+      "fma": "FMA24438"
+    },
+    {
+      "file": "FMA24440.stl",
+      "part": "carpals_l",
+      "fma": "FMA24440"
+    },
+    {
+      "file": "FMA24442.stl",
+      "part": "carpals_l",
+      "fma": "FMA24442"
+    },
+    {
+      "file": "FMA24444.stl",
+      "part": "carpals_l",
+      "fma": "FMA24444"
+    },
+    {
+      "file": "FMA24445.stl",
+      "part": "carpals_l",
+      "fma": "FMA24445"
+    },
+    {
+      "file": "FMA24447.stl",
+      "part": "carpals_l",
+      "fma": "FMA24447"
+    },
+    {
+      "file": "FMA24449.stl",
+      "part": "carpals_l",
+      "fma": "FMA24449"
+    },
+    {
+      "file": "FMA24464.stl",
+      "part": "metacarpals_r",
+      "fma": "FMA24464"
+    },
+    {
+      "file": "FMA24466.stl",
+      "part": "metacarpals_r",
+      "fma": "FMA24466"
+    },
+    {
+      "file": "FMA24468.stl",
+      "part": "metacarpals_r",
+      "fma": "FMA24468"
+    },
+    {
+      "file": "FMA24470.stl",
+      "part": "metacarpals_r",
+      "fma": "FMA24470"
+    },
+    {
+      "file": "FMA24472.stl",
+      "part": "metacarpals_r",
+      "fma": "FMA24472"
+    },
+    {
+      "file": "FMA24465.stl",
+      "part": "metacarpals_l",
+      "fma": "FMA24465"
+    },
+    {
+      "file": "FMA24467.stl",
+      "part": "metacarpals_l",
+      "fma": "FMA24467"
+    },
+    {
+      "file": "FMA24469.stl",
+      "part": "metacarpals_l",
+      "fma": "FMA24469"
+    },
+    {
+      "file": "FMA24471.stl",
+      "part": "metacarpals_l",
+      "fma": "FMA24471"
+    },
+    {
+      "file": "FMA24473.stl",
+      "part": "metacarpals_l",
+      "fma": "FMA24473"
+    },
+    {
+      "file": "FMA24450.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24450"
+    },
+    {
+      "file": "FMA24451.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24451"
+    },
+    {
+      "file": "FMA24452.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24452"
+    },
+    {
+      "file": "FMA24453.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24453"
+    },
+    {
+      "file": "FMA24454.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24454"
+    },
+    {
+      "file": "FMA24455.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24455"
+    },
+    {
+      "file": "FMA24456.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24456"
+    },
+    {
+      "file": "FMA24457.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24457"
+    },
+    {
+      "file": "FMA24458.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24458"
+    },
+    {
+      "file": "FMA24459.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24459"
+    },
+    {
+      "file": "FMA24460.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24460"
+    },
+    {
+      "file": "FMA24461.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24461"
+    },
+    {
+      "file": "FMA24462.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24462"
+    },
+    {
+      "file": "FMA24463.stl",
+      "part": "phalanges_hand_r",
+      "fma": "FMA24463"
+    },
+    {
+      "file": "FMA23938.stl",
+      "part": "phalanges_hand_l",
+      "fma": "FMA23938"
+    },
+    {
+      "file": "FMA23940.stl",
+      "part": "phalanges_hand_l",
+      "fma": "FMA23940"
+    },
+    {
+      "file": "FMA23942.stl",
+      "part": "phalanges_hand_l",
+      "fma": "FMA23942"
+    },
+    {
+      "file": "FMA23944.stl",
+      "part": "phalanges_hand_l",
+      "fma": "FMA23944"
+    },
+    {
+      "file": "FMA23951.stl",
+      "part": "phalanges_hand_l",
+      "fma": "FMA23951"
+    },
+    {
+      "file": "FMA23953.stl",
+      "part": "phalanges_hand_l",
+      "fma": "FMA23953"
+    },
+    {
+      "file": "FMA23955.stl",
+      "part": "phalanges_hand_l",
+      "fma": "FMA23955"
+    },
+    {
+      "file": "FMA23957.stl",
+      "part": "phalanges_hand_l",
+      "fma": "FMA23957"
+    },
+    {
+      "file": "FMA23959.stl",
+      "part": "phalanges_hand_l",
+      "fma": "FMA23959"
+    },
+    {
+      "file": "FMA24497.stl",
+      "part": "calcaneus_r",
+      "fma": "FMA24497"
+    },
+    {
+      "file": "FMA24498.stl",
+      "part": "calcaneus_l",
+      "fma": "FMA24498"
+    },
+    {
+      "file": "FMA24482.stl",
+      "part": "tarsals_r",
+      "fma": "FMA24482"
+    },
+    {
+      "file": "FMA24500.stl",
+      "part": "tarsals_r",
+      "fma": "FMA24500"
+    },
+    {
+      "file": "FMA24521.stl",
+      "part": "tarsals_r",
+      "fma": "FMA24521"
+    },
+    {
+      "file": "FMA24523.stl",
+      "part": "tarsals_r",
+      "fma": "FMA24523"
+    },
+    {
+      "file": "FMA24525.stl",
+      "part": "tarsals_r",
+      "fma": "FMA24525"
+    },
+    {
+      "file": "FMA24528.stl",
+      "part": "tarsals_r",
+      "fma": "FMA24528"
+    },
+    {
+      "file": "FMA24483.stl",
+      "part": "tarsals_l",
+      "fma": "FMA24483"
+    },
+    {
+      "file": "FMA24501.stl",
+      "part": "tarsals_l",
+      "fma": "FMA24501"
+    },
+    {
+      "file": "FMA24522.stl",
+      "part": "tarsals_l",
+      "fma": "FMA24522"
+    },
+    {
+      "file": "FMA24524.stl",
+      "part": "tarsals_l",
+      "fma": "FMA24524"
+    },
+    {
+      "file": "FMA24526.stl",
+      "part": "tarsals_l",
+      "fma": "FMA24526"
+    },
+    {
+      "file": "FMA24529.stl",
+      "part": "tarsals_l",
+      "fma": "FMA24529"
+    },
+    {
+      "file": "FMA24507.stl",
+      "part": "metatarsals_r",
+      "fma": "FMA24507"
+    },
+    {
+      "file": "FMA24509.stl",
+      "part": "metatarsals_r",
+      "fma": "FMA24509"
+    },
+    {
+      "file": "FMA24511.stl",
+      "part": "metatarsals_r",
+      "fma": "FMA24511"
+    },
+    {
+      "file": "FMA24513.stl",
+      "part": "metatarsals_r",
+      "fma": "FMA24513"
+    },
+    {
+      "file": "FMA24515.stl",
+      "part": "metatarsals_r",
+      "fma": "FMA24515"
+    },
+    {
+      "file": "FMA24508.stl",
+      "part": "metatarsals_l",
+      "fma": "FMA24508"
+    },
+    {
+      "file": "FMA24510.stl",
+      "part": "metatarsals_l",
+      "fma": "FMA24510"
+    },
+    {
+      "file": "FMA24512.stl",
+      "part": "metatarsals_l",
+      "fma": "FMA24512"
+    },
+    {
+      "file": "FMA24514.stl",
+      "part": "metatarsals_l",
+      "fma": "FMA24514"
+    },
+    {
+      "file": "FMA24516.stl",
+      "part": "metatarsals_l",
+      "fma": "FMA24516"
+    },
+    {
+      "file": "FMA43253.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA43253"
+    },
+    {
+      "file": "FMA32634.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32634"
+    },
+    {
+      "file": "FMA32636.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32636"
+    },
+    {
+      "file": "FMA32638.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32638"
+    },
+    {
+      "file": "FMA32640.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32640"
+    },
+    {
+      "file": "FMA32642.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32642"
+    },
+    {
+      "file": "FMA32644.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32644"
+    },
+    {
+      "file": "FMA32646.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32646"
+    },
+    {
+      "file": "FMA32650.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32650"
+    },
+    {
+      "file": "FMA32652.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32652"
+    },
+    {
+      "file": "FMA32654.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32654"
+    },
+    {
+      "file": "FMA32656.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32656"
+    },
+    {
+      "file": "FMA32658.stl",
+      "part": "phalanges_foot_r",
+      "fma": "FMA32658"
+    },
+    {
+      "file": "FMA43254.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA43254"
+    },
+    {
+      "file": "FMA32635.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32635"
+    },
+    {
+      "file": "FMA32637.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32637"
+    },
+    {
+      "file": "FMA32639.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32639"
+    },
+    {
+      "file": "FMA32641.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32641"
+    },
+    {
+      "file": "FMA32643.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32643"
+    },
+    {
+      "file": "FMA32645.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32645"
+    },
+    {
+      "file": "FMA32647.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32647"
+    },
+    {
+      "file": "FMA32651.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32651"
+    },
+    {
+      "file": "FMA32653.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32653"
+    },
+    {
+      "file": "FMA32655.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32655"
+    },
+    {
+      "file": "FMA32657.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32657"
+    },
+    {
+      "file": "FMA32659.stl",
+      "part": "phalanges_foot_l",
+      "fma": "FMA32659"
+    },
+    {
+      "file": "FMA33586.stl",
+      "part": "trapezius",
+      "fma": "FMA33586"
+    },
+    {
+      "file": "FMA33584.stl",
+      "part": "trapezius",
+      "fma": "FMA33584"
+    },
+    {
+      "file": "FMA33581.stl",
+      "part": "trapezius",
+      "fma": "FMA33581"
+    },
+    {
+      "file": "FMA33587.stl",
+      "part": "trapezius",
+      "fma": "FMA33587"
+    },
+    {
+      "file": "FMA33585.stl",
+      "part": "trapezius",
+      "fma": "FMA33585"
+    },
+    {
+      "file": "FMA33583.stl",
+      "part": "trapezius",
+      "fma": "FMA33583"
+    },
+    {
+      "file": "FMA13358.stl",
+      "part": "latissimus_dorsi",
+      "fma": "FMA13358"
+    },
+    {
+      "file": "FMA13359.stl",
+      "part": "latissimus_dorsi",
+      "fma": "FMA13359"
+    },
+    {
+      "file": "FMA34690.stl",
+      "part": "pec_major",
+      "fma": "FMA34690"
+    },
+    {
+      "file": "FMA79979.stl",
+      "part": "pec_major",
+      "fma": "FMA79979"
+    },
+    {
+      "file": "FMA45874.stl",
+      "part": "pec_major",
+      "fma": "FMA45874"
+    },
+    {
+      "file": "FMA34691.stl",
+      "part": "pec_major",
+      "fma": "FMA34691"
+    },
+    {
+      "file": "FMA79980.stl",
+      "part": "pec_major",
+      "fma": "FMA79980"
+    },
+    {
+      "file": "FMA45875.stl",
+      "part": "pec_major",
+      "fma": "FMA45875"
+    },
+    {
+      "file": "FMA13398.stl",
+      "part": "serratus_anterior",
+      "fma": "FMA13398"
+    },
+    {
+      "file": "FMA13399.stl",
+      "part": "serratus_anterior",
+      "fma": "FMA13399"
+    },
+    {
+      "file": "FMA34680.stl",
+      "part": "deltoid_r",
+      "fma": "FMA34680"
+    },
+    {
+      "file": "FMA34682.stl",
+      "part": "deltoid_r",
+      "fma": "FMA34682"
+    },
+    {
+      "file": "FMA34684.stl",
+      "part": "deltoid_r",
+      "fma": "FMA34684"
+    },
+    {
+      "file": "FMA34681.stl",
+      "part": "deltoid_l",
+      "fma": "FMA34681"
+    },
+    {
+      "file": "FMA34683.stl",
+      "part": "deltoid_l",
+      "fma": "FMA34683"
+    },
+    {
+      "file": "FMA34685.stl",
+      "part": "deltoid_l",
+      "fma": "FMA34685"
+    },
+    {
+      "file": "FMA37686.stl",
+      "part": "biceps_r",
+      "fma": "FMA37686"
+    },
+    {
+      "file": "FMA37684.stl",
+      "part": "biceps_r",
+      "fma": "FMA37684"
+    },
+    {
+      "file": "FMA37687.stl",
+      "part": "biceps_l",
+      "fma": "FMA37687"
+    },
+    {
+      "file": "FMA37685.stl",
+      "part": "biceps_l",
+      "fma": "FMA37685"
+    },
+    {
+      "file": "FMA37699.stl",
+      "part": "triceps_r",
+      "fma": "FMA37699"
+    },
+    {
+      "file": "FMA37697.stl",
+      "part": "triceps_r",
+      "fma": "FMA37697"
+    },
+    {
+      "file": "FMA37695.stl",
+      "part": "triceps_r",
+      "fma": "FMA37695"
+    },
+    {
+      "file": "FMA37700.stl",
+      "part": "triceps_l",
+      "fma": "FMA37700"
+    },
+    {
+      "file": "FMA37698.stl",
+      "part": "triceps_l",
+      "fma": "FMA37698"
+    },
+    {
+      "file": "FMA37696.stl",
+      "part": "triceps_l",
+      "fma": "FMA37696"
+    },
+    {
+      "file": "FMA13377.stl",
+      "part": "rectus_abdominis",
+      "fma": "FMA13377"
+    },
+    {
+      "file": "FMA13378.stl",
+      "part": "rectus_abdominis",
+      "fma": "FMA13378"
+    },
+    {
+      "file": "FMA13336.stl",
+      "part": "external_oblique",
+      "fma": "FMA13336"
+    },
+    {
+      "file": "FMA13337.stl",
+      "part": "external_oblique",
+      "fma": "FMA13337"
+    },
+    {
+      "file": "FMA22328.stl",
+      "part": "gluteus_maximus",
+      "fma": "FMA22328"
+    },
+    {
+      "file": "FMA22329.stl",
+      "part": "gluteus_maximus",
+      "fma": "FMA22329"
+    },
+    {
+      "file": "FMA22330.stl",
+      "part": "gluteus_medius_r",
+      "fma": "FMA22330"
+    },
+    {
+      "file": "FMA22331.stl",
+      "part": "gluteus_medius_l",
+      "fma": "FMA22331"
+    },
+    {
+      "file": "FMA22332.stl",
+      "part": "gluteus_minimus_r",
+      "fma": "FMA22332"
+    },
+    {
+      "file": "FMA22333.stl",
+      "part": "gluteus_minimus_l",
+      "fma": "FMA22333"
+    },
+    {
+      "file": "FMA22425.stl",
+      "part": "tensor_fasciae_latae_r",
+      "fma": "FMA22425"
+    },
+    {
+      "file": "FMA22426.stl",
+      "part": "tensor_fasciae_latae_l",
+      "fma": "FMA22426"
+    },
+    {
+      "file": "FMA38928.stl",
+      "part": "quadriceps_r",
+      "fma": "FMA38928"
+    },
+    {
+      "file": "FMA38930.stl",
+      "part": "quadriceps_r",
+      "fma": "FMA38930"
+    },
+    {
+      "file": "FMA38932.stl",
+      "part": "quadriceps_r",
+      "fma": "FMA38932"
+    },
+    {
+      "file": "FMA38929.stl",
+      "part": "quadriceps_l",
+      "fma": "FMA38929"
+    },
+    {
+      "file": "FMA38931.stl",
+      "part": "quadriceps_l",
+      "fma": "FMA38931"
+    },
+    {
+      "file": "FMA38933.stl",
+      "part": "quadriceps_l",
+      "fma": "FMA38933"
+    },
+    {
+      "file": "FMA45888.stl",
+      "part": "hamstrings_r",
+      "fma": "FMA45888"
+    },
+    {
+      "file": "FMA45891.stl",
+      "part": "hamstrings_r",
+      "fma": "FMA45891"
+    },
+    {
+      "file": "FMA22358.stl",
+      "part": "hamstrings_r",
+      "fma": "FMA22358"
+    },
+    {
+      "file": "FMA22448.stl",
+      "part": "hamstrings_r",
+      "fma": "FMA22448"
+    },
+    {
+      "file": "FMA45889.stl",
+      "part": "hamstrings_l",
+      "fma": "FMA45889"
+    },
+    {
+      "file": "FMA45892.stl",
+      "part": "hamstrings_l",
+      "fma": "FMA45892"
+    },
+    {
+      "file": "FMA22359.stl",
+      "part": "hamstrings_l",
+      "fma": "FMA22359"
+    },
+    {
+      "file": "FMA22449.stl",
+      "part": "hamstrings_l",
+      "fma": "FMA22449"
+    },
+    {
+      "file": "FMA45957.stl",
+      "part": "gastrocnemius_r",
+      "fma": "FMA45957"
+    },
+    {
+      "file": "FMA45960.stl",
+      "part": "gastrocnemius_r",
+      "fma": "FMA45960"
+    },
+    {
+      "file": "FMA45958.stl",
+      "part": "gastrocnemius_l",
+      "fma": "FMA45958"
+    },
+    {
+      "file": "FMA45961.stl",
+      "part": "gastrocnemius_l",
+      "fma": "FMA45961"
+    },
+    {
+      "file": "FMA22558.stl",
+      "part": "soleus_r",
+      "fma": "FMA22558"
+    },
+    {
+      "file": "FMA22559.stl",
+      "part": "soleus_l",
+      "fma": "FMA22559"
+    },
+    {
+      "file": "FMA22544.stl",
+      "part": "tibialis_anterior_r",
+      "fma": "FMA22544"
+    },
+    {
+      "file": "FMA22545.stl",
+      "part": "tibialis_anterior_l",
+      "fma": "FMA22545"
+    },
+    {
+      "file": "FMA38486.stl",
+      "part": "brachioradialis_r",
+      "fma": "FMA38486"
+    },
+    {
+      "file": "FMA38487.stl",
+      "part": "brachioradialis_l",
+      "fma": "FMA38487"
+    },
+    {
+      "file": "FMA32544.stl",
+      "part": "supraspinatus_r",
+      "fma": "FMA32544"
+    },
+    {
+      "file": "FMA32545.stl",
+      "part": "supraspinatus_l",
+      "fma": "FMA32545"
+    },
+    {
+      "file": "FMA32547.stl",
+      "part": "infraspinatus_r",
+      "fma": "FMA32547"
+    },
+    {
+      "file": "FMA32548.stl",
+      "part": "infraspinatus_l",
+      "fma": "FMA32548"
+    },
+    {
+      "file": "FMA13414.stl",
+      "part": "subscapularis_r",
+      "fma": "FMA13414"
+    },
+    {
+      "file": "FMA13415.stl",
+      "part": "subscapularis_l",
+      "fma": "FMA13415"
+    },
+    {
+      "file": "FMA32551.stl",
+      "part": "teres_major_r",
+      "fma": "FMA32551"
+    },
+    {
+      "file": "FMA32552.stl",
+      "part": "teres_major_l",
+      "fma": "FMA32552"
+    },
+    {
+      "file": "FMA32553.stl",
+      "part": "teres_minor_r",
+      "fma": "FMA32553"
+    },
+    {
+      "file": "FMA32554.stl",
+      "part": "teres_minor_l",
+      "fma": "FMA32554"
     }
   ]
 }
