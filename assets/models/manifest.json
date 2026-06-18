@@ -1,35 +1,456 @@
 {
-  "_note": "真實 BodyParts3D 骨骼 STL（CC BY-SA 2.1 JP）。所有檔案共用 BodyParts3D 世界座標，彼此自動對齊。loader 會整組載入後統一縮放置中。file=檔名, part=對應 anatomy.json 的 partId。",
+  "_note": "真實 BodyParts3D 骨骼 STL（CC BY-SA 2.1 JP）。共用 BodyParts3D 世界座標、彼此自動對齊；loader 整組載入後統一縮放置中。多檔可對應同一 partId（如脊椎/肋骨/成對顱面骨）。",
   "_attribution": "BodyParts3D, (c) The Database Center for Life Science, licensed under CC Attribution-Share Alike 2.1 Japan",
   "models": [
-    { "file": "FMA52734.stl", "part": "frontal_bone",   "fma": "FMA52734" },
-    { "file": "FMA52735.stl", "part": "occipital_bone", "fma": "FMA52735" },
-    { "file": "FMA52788.stl", "part": "parietal_bone",  "fma": "FMA52788" },
-    { "file": "FMA52789.stl", "part": "parietal_bone",  "fma": "FMA52789" },
-    { "file": "FMA52738.stl", "part": "temporal_bone",  "fma": "FMA52738" },
-    { "file": "FMA52739.stl", "part": "temporal_bone",  "fma": "FMA52739" },
-    { "file": "FMA52748.stl", "part": "mandible",       "fma": "FMA52748" },
-    { "file": "FMA52749.stl", "part": "hyoid",          "fma": "FMA52749" },
-    { "file": "FMA16202.stl", "part": "sacrum",         "fma": "FMA16202" },
-    { "file": "FMA13323.stl", "part": "clavicle_l",     "fma": "FMA13323" },
-    { "file": "FMA13322.stl", "part": "clavicle_r",     "fma": "FMA13322" },
-    { "file": "FMA13396.stl", "part": "scapula_l",      "fma": "FMA13396" },
-    { "file": "FMA13395.stl", "part": "scapula_r",      "fma": "FMA13395" },
-    { "file": "FMA23131.stl", "part": "humerus_l",      "fma": "FMA23131" },
-    { "file": "FMA23130.stl", "part": "humerus_r",      "fma": "FMA23130" },
-    { "file": "FMA23465.stl", "part": "radius_l",       "fma": "FMA23465" },
-    { "file": "FMA23464.stl", "part": "radius_r",       "fma": "FMA23464" },
-    { "file": "FMA23468.stl", "part": "ulna_l",         "fma": "FMA23468" },
-    { "file": "FMA23467.stl", "part": "ulna_r",         "fma": "FMA23467" },
-    { "file": "FMA16587.stl", "part": "pelvis",         "fma": "FMA16587" },
-    { "file": "FMA16586.stl", "part": "pelvis",         "fma": "FMA16586" },
-    { "file": "FMA24475.stl", "part": "femur_l",        "fma": "FMA24475" },
-    { "file": "FMA24474.stl", "part": "femur_r",        "fma": "FMA24474" },
-    { "file": "FMA24487.stl", "part": "patella_l",      "fma": "FMA24487" },
-    { "file": "FMA24486.stl", "part": "patella_r",      "fma": "FMA24486" },
-    { "file": "FMA24478.stl", "part": "tibia_l",        "fma": "FMA24478" },
-    { "file": "FMA24477.stl", "part": "tibia_r",        "fma": "FMA24477" },
-    { "file": "FMA24481.stl", "part": "fibula_l",       "fma": "FMA24481" },
-    { "file": "FMA24480.stl", "part": "fibula_r",       "fma": "FMA24480" }
+    {
+      "file": "FMA52734.stl",
+      "part": "frontal_bone",
+      "fma": "FMA52734"
+    },
+    {
+      "file": "FMA52735.stl",
+      "part": "occipital_bone",
+      "fma": "FMA52735"
+    },
+    {
+      "file": "FMA52788.stl",
+      "part": "parietal_bone",
+      "fma": "FMA52788"
+    },
+    {
+      "file": "FMA52789.stl",
+      "part": "parietal_bone",
+      "fma": "FMA52789"
+    },
+    {
+      "file": "FMA52738.stl",
+      "part": "temporal_bone",
+      "fma": "FMA52738"
+    },
+    {
+      "file": "FMA52739.stl",
+      "part": "temporal_bone",
+      "fma": "FMA52739"
+    },
+    {
+      "file": "FMA52748.stl",
+      "part": "mandible",
+      "fma": "FMA52748"
+    },
+    {
+      "file": "FMA52749.stl",
+      "part": "hyoid",
+      "fma": "FMA52749"
+    },
+    {
+      "file": "FMA16202.stl",
+      "part": "sacrum",
+      "fma": "FMA16202"
+    },
+    {
+      "file": "FMA13323.stl",
+      "part": "clavicle_l",
+      "fma": "FMA13323"
+    },
+    {
+      "file": "FMA13322.stl",
+      "part": "clavicle_r",
+      "fma": "FMA13322"
+    },
+    {
+      "file": "FMA13396.stl",
+      "part": "scapula_l",
+      "fma": "FMA13396"
+    },
+    {
+      "file": "FMA13395.stl",
+      "part": "scapula_r",
+      "fma": "FMA13395"
+    },
+    {
+      "file": "FMA23131.stl",
+      "part": "humerus_l",
+      "fma": "FMA23131"
+    },
+    {
+      "file": "FMA23130.stl",
+      "part": "humerus_r",
+      "fma": "FMA23130"
+    },
+    {
+      "file": "FMA23465.stl",
+      "part": "radius_l",
+      "fma": "FMA23465"
+    },
+    {
+      "file": "FMA23464.stl",
+      "part": "radius_r",
+      "fma": "FMA23464"
+    },
+    {
+      "file": "FMA23468.stl",
+      "part": "ulna_l",
+      "fma": "FMA23468"
+    },
+    {
+      "file": "FMA23467.stl",
+      "part": "ulna_r",
+      "fma": "FMA23467"
+    },
+    {
+      "file": "FMA16587.stl",
+      "part": "pelvis",
+      "fma": "FMA16587"
+    },
+    {
+      "file": "FMA16586.stl",
+      "part": "pelvis",
+      "fma": "FMA16586"
+    },
+    {
+      "file": "FMA24475.stl",
+      "part": "femur_l",
+      "fma": "FMA24475"
+    },
+    {
+      "file": "FMA24474.stl",
+      "part": "femur_r",
+      "fma": "FMA24474"
+    },
+    {
+      "file": "FMA24487.stl",
+      "part": "patella_l",
+      "fma": "FMA24487"
+    },
+    {
+      "file": "FMA24486.stl",
+      "part": "patella_r",
+      "fma": "FMA24486"
+    },
+    {
+      "file": "FMA24478.stl",
+      "part": "tibia_l",
+      "fma": "FMA24478"
+    },
+    {
+      "file": "FMA24477.stl",
+      "part": "tibia_r",
+      "fma": "FMA24477"
+    },
+    {
+      "file": "FMA24481.stl",
+      "part": "fibula_l",
+      "fma": "FMA24481"
+    },
+    {
+      "file": "FMA24480.stl",
+      "part": "fibula_r",
+      "fma": "FMA24480"
+    },
+    {
+      "file": "FMA12519.stl",
+      "part": "cervical",
+      "fma": "FMA12519"
+    },
+    {
+      "file": "FMA12520.stl",
+      "part": "cervical",
+      "fma": "FMA12520"
+    },
+    {
+      "file": "FMA12521.stl",
+      "part": "cervical",
+      "fma": "FMA12521"
+    },
+    {
+      "file": "FMA12522.stl",
+      "part": "cervical",
+      "fma": "FMA12522"
+    },
+    {
+      "file": "FMA12523.stl",
+      "part": "cervical",
+      "fma": "FMA12523"
+    },
+    {
+      "file": "FMA12524.stl",
+      "part": "cervical",
+      "fma": "FMA12524"
+    },
+    {
+      "file": "FMA12525.stl",
+      "part": "cervical",
+      "fma": "FMA12525"
+    },
+    {
+      "file": "FMA9165.stl",
+      "part": "thoracic",
+      "fma": "FMA9165"
+    },
+    {
+      "file": "FMA9187.stl",
+      "part": "thoracic",
+      "fma": "FMA9187"
+    },
+    {
+      "file": "FMA9209.stl",
+      "part": "thoracic",
+      "fma": "FMA9209"
+    },
+    {
+      "file": "FMA9248.stl",
+      "part": "thoracic",
+      "fma": "FMA9248"
+    },
+    {
+      "file": "FMA9922.stl",
+      "part": "thoracic",
+      "fma": "FMA9922"
+    },
+    {
+      "file": "FMA9945.stl",
+      "part": "thoracic",
+      "fma": "FMA9945"
+    },
+    {
+      "file": "FMA9968.stl",
+      "part": "thoracic",
+      "fma": "FMA9968"
+    },
+    {
+      "file": "FMA9991.stl",
+      "part": "thoracic",
+      "fma": "FMA9991"
+    },
+    {
+      "file": "FMA10014.stl",
+      "part": "thoracic",
+      "fma": "FMA10014"
+    },
+    {
+      "file": "FMA10037.stl",
+      "part": "thoracic",
+      "fma": "FMA10037"
+    },
+    {
+      "file": "FMA10059.stl",
+      "part": "thoracic",
+      "fma": "FMA10059"
+    },
+    {
+      "file": "FMA10081.stl",
+      "part": "thoracic",
+      "fma": "FMA10081"
+    },
+    {
+      "file": "FMA13072.stl",
+      "part": "lumbar",
+      "fma": "FMA13072"
+    },
+    {
+      "file": "FMA13073.stl",
+      "part": "lumbar",
+      "fma": "FMA13073"
+    },
+    {
+      "file": "FMA13074.stl",
+      "part": "lumbar",
+      "fma": "FMA13074"
+    },
+    {
+      "file": "FMA13075.stl",
+      "part": "lumbar",
+      "fma": "FMA13075"
+    },
+    {
+      "file": "FMA13076.stl",
+      "part": "lumbar",
+      "fma": "FMA13076"
+    },
+    {
+      "file": "FMA7857.stl",
+      "part": "ribs",
+      "fma": "FMA7857"
+    },
+    {
+      "file": "FMA7987.stl",
+      "part": "ribs",
+      "fma": "FMA7987"
+    },
+    {
+      "file": "FMA7882.stl",
+      "part": "ribs",
+      "fma": "FMA7882"
+    },
+    {
+      "file": "FMA8012.stl",
+      "part": "ribs",
+      "fma": "FMA8012"
+    },
+    {
+      "file": "FMA7909.stl",
+      "part": "ribs",
+      "fma": "FMA7909"
+    },
+    {
+      "file": "FMA8039.stl",
+      "part": "ribs",
+      "fma": "FMA8039"
+    },
+    {
+      "file": "FMA7957.stl",
+      "part": "ribs",
+      "fma": "FMA7957"
+    },
+    {
+      "file": "FMA8148.stl",
+      "part": "ribs",
+      "fma": "FMA8148"
+    },
+    {
+      "file": "FMA8066.stl",
+      "part": "ribs",
+      "fma": "FMA8066"
+    },
+    {
+      "file": "FMA8093.stl",
+      "part": "ribs",
+      "fma": "FMA8093"
+    },
+    {
+      "file": "FMA8175.stl",
+      "part": "ribs",
+      "fma": "FMA8175"
+    },
+    {
+      "file": "FMA8202.stl",
+      "part": "ribs",
+      "fma": "FMA8202"
+    },
+    {
+      "file": "FMA8229.stl",
+      "part": "ribs",
+      "fma": "FMA8229"
+    },
+    {
+      "file": "FMA8256.stl",
+      "part": "ribs",
+      "fma": "FMA8256"
+    },
+    {
+      "file": "FMA8283.stl",
+      "part": "ribs",
+      "fma": "FMA8283"
+    },
+    {
+      "file": "FMA8310.stl",
+      "part": "ribs",
+      "fma": "FMA8310"
+    },
+    {
+      "file": "FMA8364.stl",
+      "part": "ribs",
+      "fma": "FMA8364"
+    },
+    {
+      "file": "FMA8391.stl",
+      "part": "ribs",
+      "fma": "FMA8391"
+    },
+    {
+      "file": "FMA8445.stl",
+      "part": "ribs",
+      "fma": "FMA8445"
+    },
+    {
+      "file": "FMA8472.stl",
+      "part": "ribs",
+      "fma": "FMA8472"
+    },
+    {
+      "file": "FMA8531.stl",
+      "part": "ribs",
+      "fma": "FMA8531"
+    },
+    {
+      "file": "FMA8532.stl",
+      "part": "ribs",
+      "fma": "FMA8532"
+    },
+    {
+      "file": "FMA8533.stl",
+      "part": "ribs",
+      "fma": "FMA8533"
+    },
+    {
+      "file": "FMA8534.stl",
+      "part": "ribs",
+      "fma": "FMA8534"
+    },
+    {
+      "file": "FMA52736.stl",
+      "part": "sphenoid_bone",
+      "fma": "FMA52736"
+    },
+    {
+      "file": "FMA52740.stl",
+      "part": "ethmoid_bone",
+      "fma": "FMA52740"
+    },
+    {
+      "file": "FMA9710.stl",
+      "part": "vomer",
+      "fma": "FMA9710"
+    },
+    {
+      "file": "FMA53649.stl",
+      "part": "maxilla",
+      "fma": "FMA53649"
+    },
+    {
+      "file": "FMA53650.stl",
+      "part": "maxilla",
+      "fma": "FMA53650"
+    },
+    {
+      "file": "FMA52892.stl",
+      "part": "zygomatic_bone",
+      "fma": "FMA52892"
+    },
+    {
+      "file": "FMA52893.stl",
+      "part": "zygomatic_bone",
+      "fma": "FMA52893"
+    },
+    {
+      "file": "FMA53647.stl",
+      "part": "nasal_bone",
+      "fma": "FMA53647"
+    },
+    {
+      "file": "FMA53648.stl",
+      "part": "nasal_bone",
+      "fma": "FMA53648"
+    },
+    {
+      "file": "FMA53645.stl",
+      "part": "lacrimal_bone",
+      "fma": "FMA53645"
+    },
+    {
+      "file": "FMA53646.stl",
+      "part": "lacrimal_bone",
+      "fma": "FMA53646"
+    },
+    {
+      "file": "FMA53655.stl",
+      "part": "palatine_bone",
+      "fma": "FMA53655"
+    },
+    {
+      "file": "FMA53656.stl",
+      "part": "palatine_bone",
+      "fma": "FMA53656"
+    }
   ]
 }
