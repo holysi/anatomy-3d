@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人體解剖生理學學習平台</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">🫀</div>
+  <h1>人體解剖生理學</h1>
+  <span class="sub">Human Anatomy &amp; Physiology</span>
+  <div class="mode-toggle" id="mode-toggle">
+    <button class="mode-btn active" data-mode="schematic">示意圖 Schematic</button>
+    <button class="mode-btn" data-mode="real">真實模型 Real</button>
+  </div>
+  <span class="hint">滑鼠拖曳旋轉 · 滾輪縮放 · 點擊查看詳情</span>
+</header>
+
+<div class="main">
+
+  <!-- ── Sidebar ───────────────────────────── -->
+  <div id="sidebar">
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">顯示圖層 · Layers <span id="stat-line" class="stat-line"></span></div>
+      <div id="layer-buttons"></div>
+    </div>
+
+    <div class="controls-row">
+      <button class="ctrl-btn" id="btn-all">全開</button>
+      <button class="ctrl-btn" id="btn-none">全關</button>
+      <button class="ctrl-btn" id="btn-reset">歸位</button>
+    </div>
+
+    <div class="sidebar-section search-section">
+      <input id="part-search" class="part-search" type="search"
+             placeholder="🔍 搜尋部位（中／英／拉丁名）" autocomplete="off">
+    </div>
+
+    <div id="part-list" class="part-list"></div>
+  </div>
+
+  <!-- ── 3D Canvas (center) ────────────────────── -->
+  <div id="canvas-wrap">
+    <div id="tooltip"></div>
+  </div>
+
+  <!-- ── Info panel (right) ────────────────────── -->
+  <div id="info-sidebar">
+    <div class="sidebar-section" style="border-bottom:none">
+      <div class="sidebar-label">部位資訊 · Part Info</div>
+    </div>
+    <div id="info-panel"></div>
+  </div>
+
+</div>
+
+<!-- Three.js via importmap -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="src/main.js"></script>
+
+</body>
+</html>
