@@ -24,8 +24,26 @@ let schematicGroup = null, realGroup = null;
 let meshMapSchematic = null, meshMapReal = new Map();
 let realReady = false;
 
-// active map for the current mode
+// In real mode: bones use meshMapReal, soft tissues use meshMapSchematic
 const meshMapOf = () => (mode === 'real' ? meshMapReal : meshMapSchematic);
+
+function getActiveMeshes(partId) {
+  if (mode === 'real') {
+    const layer = getPartLayer(partId);
+    return layer === 'skeleton'
+      ? (meshMapReal.get(partId)      || [])
+      : (meshMapSchematic.get(partId) || []);
+  }
+  return meshMapSchematic.get(partId) || [];
+}
+
+function isModeledHybrid(id) {
+  if (mode === 'real') {
+    const layer = getPartLayer(id);
+    return layer === 'skeleton' ? meshMapReal.has(id) : meshMapSchematic.has(id);
+  }
+  return meshMapSchematic.has(id);
+}
 
 // ── DOM refs ───────────────────────────────────────────────────
 const canvasWrap = document.getElementById('canvas-wrap');
@@ -83,9 +101,9 @@ const origColors = new Map();
 
 const getPartInfo        = (id) => partIndex.get(id);
 const getPartLayer       = (id) => { const p = partIndex.get(id); return p ? p.layer : null; };
-const getAllMeshesForPart= (id) => meshMapOf().get(id) || [];
+const getAllMeshesForPart= (id) => getActiveMeshes(id);
 const isLayerVisible     = (layer) => layer ? activeLayerState[layer] : false;
-const isModeled          = (id) => meshMapOf().has(id);
+const isModeled          = (id) => isModeledHybrid(id);
 
 function highlightMeshes(partId, on) {
   getAllMeshesForPart(partId).forEach(m => {
@@ -251,10 +269,32 @@ function showInfoPanelEmpty() {
 
 // ── Layer visibility ───────────────────────────────────────────
 function applyLayerVisibility() {
-  meshMapOf().forEach((meshes, partId) => {
-    const visible = isLayerVisible(getPartLayer(partId));
-    meshes.forEach(m => { m.visible = visible; });
-  });
+  if (mode === 'real') {
+    // Real mode: skeleton from STL, soft tissues from schematic geometry
+    meshMapReal.forEach((meshes, partId) => {
+      const visible = isLayerVisible(getPartLayer(partId));
+      meshes.forEach(m => { m.visible = visible; });
+    });
+    meshMapSchematic.forEach((meshes, partId) => {
+      const layer = getPartLayer(partId);
+      // Hide schematic skeleton (real STL is used instead); show other layers normally
+      const visible = layer !== 'skeleton' && isLayerVisible(layer);
+      meshes.forEach(m => { m.visible = visible; });
+    });
+    // Hide ghost body in real mode (STL bones serve as reference)
+    schematicGroup && schematicGroup.traverse(m => {
+      if (m.userData.isGhost) m.visible = false;
+    });
+  } else {
+    meshMapSchematic.forEach((meshes, partId) => {
+      const visible = isLayerVisible(getPartLayer(partId));
+      meshes.forEach(m => { m.visible = visible; });
+    });
+    // Show ghost in schematic mode
+    schematicGroup && schematicGroup.traverse(m => {
+      if (m.userData.isGhost) m.visible = true;
+    });
+  }
   filterList();
 }
 
@@ -442,9 +482,9 @@ async function init() {
 function updateStatLine() {
   const statEl = document.getElementById('stat-line');
   if (!statEl) return;
-  const modeledCount = parts.filter(p => meshMapOf().has(p.id)).length;
-  const label = mode === 'real' ? '真實 STL' : '示意 3D';
-  statEl.textContent = `${parts.length} 部位 · ${modeledCount} ${label}`;
+  const modeledCount = parts.filter(p => isModeled(p.id)).length;
+  const label = mode === 'real' ? '骨骼 STL · 其他示意' : '示意 3D';
+  statEl.textContent = `${parts.length} 部位 · ${modeledCount} 已建模 (${label})`;
 }
 
 // ── Mode switching ─────────────────────────────────────────────
@@ -462,24 +502,33 @@ function wireModeToggle() {
 }
 
 function enterMode(target) {
-  // clear any highlight in the old world before switching
   if (selectedPartId) highlightMeshes(selectedPartId, false);
   mode = target;
 
   document.querySelectorAll('.mode-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.mode === mode));
 
-  if (schematicGroup) schematicGroup.visible = (mode === 'schematic');
+  // schematicGroup stays in scene always; real STL group only shown in real mode
+  if (schematicGroup) schematicGroup.visible = true;
   if (realGroup)      realGroup.visible      = (mode === 'real');
 
-  clickableMeshes = getClickableMeshes(mode === 'real' ? realGroup : schematicGroup);
+  // In real mode: click real bones + schematic soft tissues; in schematic: all schematic
+  if (mode === 'real') {
+    const realBones = getClickableMeshes(realGroup);
+    const softTissue = [];
+    meshMapSchematic.forEach((meshes, partId) => {
+      if (getPartLayer(partId) !== 'skeleton') softTissue.push(...meshes);
+    });
+    clickableMeshes = [...realBones, ...softTissue];
+  } else {
+    clickableMeshes = getClickableMeshes(schematicGroup);
+  }
 
   applyLayerVisibility();
   updateStatLine();
-  // re-render list flags (modeled differs per mode) and info panel
   buildPartList();
   if (selectedPartId) {
-    if (meshMapOf().has(selectedPartId) && isLayerVisible(getPartLayer(selectedPartId)))
+    if (isModeled(selectedPartId) && isLayerVisible(getPartLayer(selectedPartId)))
       highlightMeshes(selectedPartId, true);
     showInfoPanel(getPartInfo(selectedPartId));
     syncListSelection();

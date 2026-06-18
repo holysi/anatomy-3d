@@ -36,13 +36,20 @@ export async function loadRealModel(partIndex) {
   }));
 
   // ── Orient: bring the longest bbox axis (body height) to +Y ──
+  // BodyParts3D uses Z as body height axis, with feet at +Z and head at -Z.
+  // Rx(+π/2) maps -Z→+Y (head up) and anterior (+Y in source) → +Z (faces camera).
   let box = new THREE.Box3().setFromObject(inner);
   let size = box.getSize(new THREE.Vector3());
   const longest = size.x >= size.y && size.x >= size.z ? 'x'
                 : size.z >= size.y ? 'z' : 'y';
-  if (longest === 'z') inner.rotation.x = -Math.PI / 2;       // Z-up -> Y-up
-  else if (longest === 'x') inner.rotation.z = Math.PI / 2;   // X-up -> Y-up
-  inner.rotation.y = Math.PI; // face +Z (BodyParts3D anterior convention)
+  if (longest === 'z') {
+    inner.rotation.x = Math.PI / 2; // feet at +Z → -Y, head at -Z → +Y; anterior +Y → +Z
+  } else if (longest === 'x') {
+    inner.rotation.z = Math.PI / 2;
+    inner.rotation.y = Math.PI;
+  } else {
+    inner.rotation.y = Math.PI;
+  }
 
   // Wrap so we can scale/translate after orientation bakes into world matrix
   const group = new THREE.Group();
