@@ -75,7 +75,11 @@ export async function loadRealModel(partIndex) {
   const longest = size.x >= size.y && size.x >= size.z ? 'x'
                 : size.z >= size.y ? 'z' : 'y';
   if (longest === 'z') {
-    inner.rotation.x = Math.PI / 2;
+    // BodyParts3D: head at +Z, feet at -Z, anterior at +Y.
+    // Rx(-π/2): +Z→+Y (head up), -Z→-Y (feet down), +Y→-Z (anterior).
+    // Ry(π): flips anterior from -Z to +Z so it faces the camera.
+    inner.rotation.x = -Math.PI / 2;
+    inner.rotation.y = Math.PI;
   } else if (longest === 'x') {
     inner.rotation.z = Math.PI / 2;
     inner.rotation.y = Math.PI;
