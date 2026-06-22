@@ -240,10 +240,99 @@ export function buildBody(scene, materials, parts) {
   addMesh('external_oblique', new THREE.BoxGeometry(0.06, 0.2, 0.07), [0.13, 1.08, 0.04]);
   addMesh('gluteus_maximus', new THREE.SphereGeometry(0.085, 12, 10), [-0.08, 0.69, -0.085], [0, 0, 0], [1, 0.9, 0.8]);
   addMesh('gluteus_maximus', new THREE.SphereGeometry(0.085, 12, 10), [0.08, 0.69, -0.085], [0, 0, 0], [1, 0.9, 0.8]);
-  addMesh('hamstrings_l', new THREE.CylinderGeometry(0.06, 0.05, 0.38, 10), [-0.1, 0.445, -0.042]);
-  addMesh('hamstrings_r', new THREE.CylinderGeometry(0.06, 0.05, 0.38, 10), [0.1, 0.445, -0.042]);
+  addMesh('biceps_femoris_l', new THREE.CylinderGeometry(0.058, 0.048, 0.38, 10), [-0.1, 0.445, -0.042]);
+  addMesh('biceps_femoris_r', new THREE.CylinderGeometry(0.058, 0.048, 0.38, 10), [0.1, 0.445, -0.042]);
   addMesh('tibialis_anterior_l', new THREE.CylinderGeometry(0.03, 0.02, 0.34, 9), [-0.082, -0.07, 0.035]);
   addMesh('tibialis_anterior_r', new THREE.CylinderGeometry(0.03, 0.02, 0.34, 9), [0.082, -0.07, 0.035]);
+
+  // ── Gluteal group (medius / minimus / TFL) ────────────────────────────────
+  addMesh('gluteus_medius_l', new THREE.SphereGeometry(0.062, 12, 10), [-0.1, 0.73, -0.055], [0, 0, 0], [1, 0.78, 0.7]);
+  addMesh('gluteus_medius_r', new THREE.SphereGeometry(0.062, 12, 10), [0.1, 0.73, -0.055], [0, 0, 0], [1, 0.78, 0.7]);
+  addMesh('gluteus_minimus_l', new THREE.SphereGeometry(0.044, 10, 10), [-0.11, 0.7, -0.035], [0, 0, 0], [1, 0.68, 0.64]);
+  addMesh('gluteus_minimus_r', new THREE.SphereGeometry(0.044, 10, 10), [0.11, 0.7, -0.035], [0, 0, 0], [1, 0.68, 0.64]);
+  addMesh('tensor_fasciae_latae_l', new THREE.CylinderGeometry(0.024, 0.017, 0.14, 8), [-0.14, 0.7, 0.03]);
+  addMesh('tensor_fasciae_latae_r', new THREE.CylinderGeometry(0.024, 0.017, 0.14, 8), [0.14, 0.7, 0.03]);
+
+  // ── Rotator cuff ─────────────────────────────────────────────────────────
+  addMesh('supraspinatus_l', new THREE.CylinderGeometry(0.021, 0.015, 0.13, 8), [-0.205, 1.395, -0.024], [0, 0, Math.PI * 0.46]);
+  addMesh('supraspinatus_r', new THREE.CylinderGeometry(0.021, 0.015, 0.13, 8), [0.205, 1.395, -0.024], [0, 0, -Math.PI * 0.46]);
+  addMesh('infraspinatus_l', new THREE.BoxGeometry(0.09, 0.08, 0.02), [-0.18, 1.245, -0.077]);
+  addMesh('infraspinatus_r', new THREE.BoxGeometry(0.09, 0.08, 0.02), [0.18, 1.245, -0.077]);
+  addMesh('subscapularis_l', new THREE.BoxGeometry(0.088, 0.1, 0.018), [-0.184, 1.27, -0.028]);
+  addMesh('subscapularis_r', new THREE.BoxGeometry(0.088, 0.1, 0.018), [0.184, 1.27, -0.028]);
+  addMesh('teres_minor_l', new THREE.CylinderGeometry(0.016, 0.011, 0.15, 8), [-0.21, 1.285, -0.054], [0, 0, 0.32]);
+  addMesh('teres_minor_r', new THREE.CylinderGeometry(0.016, 0.011, 0.15, 8), [0.21, 1.285, -0.054], [0, 0, -0.32]);
+  addMesh('teres_major_l', new THREE.CylinderGeometry(0.022, 0.015, 0.2, 8), [-0.22, 1.195, -0.043], [0, 0, 0.3]);
+  addMesh('teres_major_r', new THREE.CylinderGeometry(0.022, 0.015, 0.2, 8), [0.22, 1.195, -0.043], [0, 0, -0.3]);
+
+  // ── Forearm / serratus / soleus (missing from earlier) ───────────────────
+  addMesh('brachioradialis_l', new THREE.CylinderGeometry(0.022, 0.013, 0.22, 8), [-0.31, 0.9, 0.018]);
+  addMesh('brachioradialis_r', new THREE.CylinderGeometry(0.022, 0.013, 0.22, 8), [0.31, 0.9, 0.018]);
+  addMesh('serratus_anterior', new THREE.BoxGeometry(0.05, 0.19, 0.04), [-0.175, 1.2, 0.072]);
+  addMesh('serratus_anterior', new THREE.BoxGeometry(0.05, 0.19, 0.04), [0.175, 1.2, 0.072]);
+  addMesh('soleus_l', new THREE.CylinderGeometry(0.04, 0.022, 0.27, 9), [-0.1, -0.112, -0.018]);
+  addMesh('soleus_r', new THREE.CylinderGeometry(0.04, 0.022, 0.27, 9), [0.1, -0.112, -0.018]);
+
+  // ── Rhomboids (back between scapulae) ────────────────────────────────────
+  addMesh('rhomboid_major_l', new THREE.BoxGeometry(0.088, 0.1, 0.022), [-0.13, 1.21, -0.078], [0, 0, -0.2]);
+  addMesh('rhomboid_major_r', new THREE.BoxGeometry(0.088, 0.1, 0.022), [0.13, 1.21, -0.078], [0, 0, 0.2]);
+  addMesh('rhomboid_minor_l', new THREE.BoxGeometry(0.06, 0.055, 0.018), [-0.1, 1.33, -0.074], [0, 0, -0.18]);
+  addMesh('rhomboid_minor_r', new THREE.BoxGeometry(0.06, 0.055, 0.018), [0.1, 1.33, -0.074], [0, 0, 0.18]);
+
+  // ── Deep hip rotators ────────────────────────────────────────────────────
+  addMesh('piriformis_l', new THREE.CylinderGeometry(0.021, 0.014, 0.13, 8), [-0.09, 0.625, -0.063], [0, 0, Math.PI * 0.38]);
+  addMesh('piriformis_r', new THREE.CylinderGeometry(0.021, 0.014, 0.13, 8), [0.09, 0.625, -0.063], [0, 0, -Math.PI * 0.38]);
+  addMesh('obturator_internus_l', new THREE.CylinderGeometry(0.017, 0.013, 0.09, 7), [-0.084, 0.598, -0.027], [0, 0.5, 0.45]);
+  addMesh('obturator_internus_r', new THREE.CylinderGeometry(0.017, 0.013, 0.09, 7), [0.084, 0.598, -0.027], [0, -0.5, -0.45]);
+  addMesh('quadratus_femoris_l', new THREE.CylinderGeometry(0.019, 0.019, 0.088, 7), [-0.098, 0.578, -0.053], [0, 0, Math.PI / 2]);
+  addMesh('quadratus_femoris_r', new THREE.CylinderGeometry(0.019, 0.019, 0.088, 7), [0.098, 0.578, -0.053], [0, 0, Math.PI / 2]);
+
+  // ── Iliopsoas ────────────────────────────────────────────────────────────
+  addMesh('iliacus_l', new THREE.CylinderGeometry(0.038, 0.023, 0.19, 9), [-0.09, 0.62, 0.038], [0.18, 0, 0.22]);
+  addMesh('iliacus_r', new THREE.CylinderGeometry(0.038, 0.023, 0.19, 9), [0.09, 0.62, 0.038], [0.18, 0, -0.22]);
+  addMesh('psoas_major_l', new THREE.CylinderGeometry(0.024, 0.019, 0.34, 8), [-0.05, 0.55, 0.028], [0.12, 0, 0.16]);
+  addMesh('psoas_major_r', new THREE.CylinderGeometry(0.024, 0.019, 0.34, 8), [0.05, 0.55, 0.028], [0.12, 0, -0.16]);
+
+  // ── Sartorius (diagonal across anterior thigh) ────────────────────────────
+  addMesh('sartorius_l', new THREE.CylinderGeometry(0.013, 0.009, 0.54, 8), [-0.09, 0.44, 0.05], [0, 0, 0.14]);
+  addMesh('sartorius_r', new THREE.CylinderGeometry(0.013, 0.009, 0.54, 8), [0.09, 0.44, 0.05], [0, 0, -0.14]);
+
+  // ── Medial thigh (adductors + gracilis + pectineus) ───────────────────────
+  addMesh('gracilis_l', new THREE.CylinderGeometry(0.013, 0.009, 0.44, 8), [-0.04, 0.39, 0.014]);
+  addMesh('gracilis_r', new THREE.CylinderGeometry(0.013, 0.009, 0.44, 8), [0.04, 0.39, 0.014]);
+  addMesh('pectineus_l', new THREE.CylinderGeometry(0.021, 0.016, 0.1, 8), [-0.072, 0.608, 0.042], [0.12, 0, 0.28]);
+  addMesh('pectineus_r', new THREE.CylinderGeometry(0.021, 0.016, 0.1, 8), [0.072, 0.608, 0.042], [0.12, 0, -0.28]);
+  addMesh('adductor_longus_l', new THREE.CylinderGeometry(0.027, 0.018, 0.33, 9), [-0.06, 0.44, 0.038], [0.1, 0, 0.18]);
+  addMesh('adductor_longus_r', new THREE.CylinderGeometry(0.027, 0.018, 0.33, 9), [0.06, 0.44, 0.038], [0.1, 0, -0.18]);
+  addMesh('adductor_brevis_l', new THREE.CylinderGeometry(0.023, 0.016, 0.2, 8), [-0.065, 0.538, 0.018], [0.16, 0, 0.26]);
+  addMesh('adductor_brevis_r', new THREE.CylinderGeometry(0.023, 0.016, 0.2, 8), [0.065, 0.538, 0.018], [0.16, 0, -0.26]);
+  addMesh('adductor_magnus_l', new THREE.CylinderGeometry(0.04, 0.027, 0.44, 10), [-0.055, 0.415, 0.0], [0, 0, 0.1]);
+  addMesh('adductor_magnus_r', new THREE.CylinderGeometry(0.04, 0.027, 0.44, 10), [0.055, 0.415, 0.0], [0, 0, -0.1]);
+
+  // ── Posterior thigh (semi*) ───────────────────────────────────────────────
+  addMesh('semitendinosus_l', new THREE.CylinderGeometry(0.025, 0.017, 0.36, 9), [-0.068, 0.44, -0.056]);
+  addMesh('semitendinosus_r', new THREE.CylinderGeometry(0.025, 0.017, 0.36, 9), [0.068, 0.44, -0.056]);
+  addMesh('semimembranosus_l', new THREE.CylinderGeometry(0.031, 0.021, 0.35, 9), [-0.055, 0.44, -0.042]);
+  addMesh('semimembranosus_r', new THREE.CylinderGeometry(0.031, 0.021, 0.35, 9), [0.055, 0.44, -0.042]);
+
+  // ── Lateral lower leg (fibularis) ─────────────────────────────────────────
+  addMesh('fibularis_longus_l', new THREE.CylinderGeometry(0.021, 0.013, 0.3, 8), [-0.128, -0.08, 0.014]);
+  addMesh('fibularis_longus_r', new THREE.CylinderGeometry(0.021, 0.013, 0.3, 8), [0.128, -0.08, 0.014]);
+  addMesh('fibularis_brevis_l', new THREE.CylinderGeometry(0.017, 0.011, 0.2, 8), [-0.128, -0.166, 0.012]);
+  addMesh('fibularis_brevis_r', new THREE.CylinderGeometry(0.017, 0.011, 0.2, 8), [0.128, -0.166, 0.012]);
+  addMesh('popliteus_l', new THREE.CylinderGeometry(0.017, 0.013, 0.065, 7), [-0.1, 0.167, -0.043], [0, 0, 0.36]);
+  addMesh('popliteus_r', new THREE.CylinderGeometry(0.017, 0.013, 0.065, 7), [0.1, 0.167, -0.043], [0, 0, -0.36]);
+
+  // ── Diaphragm (horizontal ring at base of ribcage) ────────────────────────
+  addMesh('diaphragm', new THREE.TorusGeometry(0.114, 0.017, 8, 18), [0, 0.988, 0.018], [Math.PI / 2, 0, 0]);
+
+  // ── Head / jaw muscles ───────────────────────────────────────────────────
+  addMesh('masseter_l', new THREE.BoxGeometry(0.03, 0.062, 0.024), [-0.063, 1.545, 0.06]);
+  addMesh('masseter_r', new THREE.BoxGeometry(0.03, 0.062, 0.024), [0.063, 1.545, 0.06]);
+  addMesh('temporalis_l', new THREE.SphereGeometry(0.052, 10, 10), [-0.1, 1.675, -0.005], [0, 0, 0], [1, 0.47, 0.57]);
+  addMesh('temporalis_r', new THREE.SphereGeometry(0.052, 10, 10), [0.1, 1.675, -0.005], [0, 0, 0], [1, 0.47, 0.57]);
+  addMesh('splenius_capitis_l', new THREE.CylinderGeometry(0.013, 0.011, 0.185, 8), [-0.04, 1.474, -0.044], [0.16, 0, 0.3]);
+  addMesh('splenius_capitis_r', new THREE.CylinderGeometry(0.013, 0.011, 0.185, 8), [0.04, 1.474, -0.044], [0.16, 0, -0.3]);
 
   // ══════════════ JOINT (extended) ══════════════
   addMesh('wrist_l', new THREE.SphereGeometry(0.026, 12, 12), [-0.31, 0.66, 0.012]);
