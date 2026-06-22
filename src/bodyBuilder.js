@@ -213,8 +213,8 @@ export function buildBody(scene, materials, parts) {
   tube(curve([0.27, 1.06, -0.01], [0.31, 0.92, -0.01], [0.33, 0.78, -0.01], [0.34, 0.64, -0.01]), 'radial_r', 0.005);
 
   // ══════════════ SKELETON (extended) ══════════════
-  addMesh('sacrum', new THREE.ConeGeometry(0.052, 0.13, 8), [0, 0.1, -0.012], [Math.PI, 0, 0]);
-  addMesh('coccyx', new THREE.ConeGeometry(0.018, 0.05, 6), [0, 0.025, 0.0], [Math.PI, 0, 0]);
+  addMesh('sacrum', new THREE.ConeGeometry(0.052, 0.13, 8), [0, 0.618, -0.055], [Math.PI, 0, 0]);
+  addMesh('coccyx', new THREE.ConeGeometry(0.018, 0.05, 6), [0, 0.535, -0.06], [Math.PI, 0, 0]);
   addMesh('carpals_l', new THREE.BoxGeometry(0.052, 0.03, 0.026), [-0.31, 0.655, 0.018]);
   addMesh('carpals_r', new THREE.BoxGeometry(0.052, 0.03, 0.026), [0.31, 0.655, 0.018]);
   addMesh('metacarpals_l', new THREE.BoxGeometry(0.06, 0.07, 0.02), [-0.31, 0.6, 0.018]);
@@ -339,8 +339,8 @@ export function buildBody(scene, materials, parts) {
   addMesh('wrist_r', new THREE.SphereGeometry(0.026, 12, 12), [0.31, 0.66, 0.012]);
   addMesh('tmj', new THREE.SphereGeometry(0.018, 10, 10), [-0.072, 1.56, 0.035]);
   addMesh('tmj', new THREE.SphereGeometry(0.018, 10, 10), [0.072, 1.56, 0.035]);
-  addMesh('sacroiliac_l', new THREE.SphereGeometry(0.022, 10, 10), [-0.05, 0.17, -0.025]);
-  addMesh('sacroiliac_r', new THREE.SphereGeometry(0.022, 10, 10), [0.05, 0.17, -0.025]);
+  addMesh('sacroiliac_l', new THREE.SphereGeometry(0.022, 10, 10), [-0.05, 0.62, -0.05]);
+  addMesh('sacroiliac_r', new THREE.SphereGeometry(0.022, 10, 10), [0.05, 0.62, -0.05]);
 
   // ══════════════ JOINT (from joint reference sheet) ══════════════
   const jointGeo = () => new THREE.SphereGeometry(0.02, 12, 12);
