@@ -1,5 +1,5 @@
 {
-  "_note": "真實 BodyParts3D 骨骼 STL（CC BY-SA 2.1 JP）。共用 BodyParts3D 世界座標、彼此自動對齊；loader 整組載入後統一縮放置中。多檔可對應同一 partId（如脊椎/肋骨/成對顱面骨）。",
+  "_note": "\u771f\u5be6 BodyParts3D \u9aa8\u9abc STL\uff08CC BY-SA 2.1 JP\uff09\u3002\u5171\u7528 BodyParts3D \u4e16\u754c\u5ea7\u6a19\u3001\u5f7c\u6b64\u81ea\u52d5\u5c0d\u9f4a\uff1bloader \u6574\u7d44\u8f09\u5165\u5f8c\u7d71\u4e00\u7e2e\u653e\u7f6e\u4e2d\u3002\u591a\u6a94\u53ef\u5c0d\u61c9\u540c\u4e00 partId\uff08\u5982\u810a\u690e/\u808b\u9aa8/\u6210\u5c0d\u9871\u9762\u9aa8\uff09\u3002",
   "_attribution": "BodyParts3D, (c) The Database Center for Life Science, licensed under CC Attribution-Share Alike 2.1 Japan",
   "models": [
     {
@@ -1214,42 +1214,42 @@
     },
     {
       "file": "FMA45888.stl",
-      "part": "hamstrings_r",
+      "part": "biceps_femoris_r",
       "fma": "FMA45888"
     },
     {
       "file": "FMA45891.stl",
-      "part": "hamstrings_r",
+      "part": "biceps_femoris_r",
       "fma": "FMA45891"
     },
     {
       "file": "FMA22358.stl",
-      "part": "hamstrings_r",
+      "part": "semitendinosus_r",
       "fma": "FMA22358"
     },
     {
       "file": "FMA22448.stl",
-      "part": "hamstrings_r",
+      "part": "semimembranosus_r",
       "fma": "FMA22448"
     },
     {
       "file": "FMA45889.stl",
-      "part": "hamstrings_l",
+      "part": "biceps_femoris_l",
       "fma": "FMA45889"
     },
     {
       "file": "FMA45892.stl",
-      "part": "hamstrings_l",
+      "part": "biceps_femoris_l",
       "fma": "FMA45892"
     },
     {
       "file": "FMA22359.stl",
-      "part": "hamstrings_l",
+      "part": "semitendinosus_l",
       "fma": "FMA22359"
     },
     {
       "file": "FMA22449.stl",
-      "part": "hamstrings_l",
+      "part": "semimembranosus_l",
       "fma": "FMA22449"
     },
     {
@@ -1351,6 +1351,162 @@
       "file": "FMA32554.stl",
       "part": "teres_minor_l",
       "fma": "FMA32554"
+    },
+    {
+      "file": "FMA13381.stl",
+      "part": "rhomboid_major_r"
+    },
+    {
+      "file": "FMA13382.stl",
+      "part": "rhomboid_major_l"
+    },
+    {
+      "file": "FMA13383.stl",
+      "part": "rhomboid_minor_r"
+    },
+    {
+      "file": "FMA13384.stl",
+      "part": "rhomboid_minor_l"
+    },
+    {
+      "file": "FMA22340.stl",
+      "part": "piriformis_r"
+    },
+    {
+      "file": "FMA22341.stl",
+      "part": "piriformis_l"
+    },
+    {
+      "file": "FMA22324.stl",
+      "part": "obturator_internus_r"
+    },
+    {
+      "file": "FMA22325.stl",
+      "part": "obturator_internus_l"
+    },
+    {
+      "file": "FMA22338.stl",
+      "part": "quadratus_femoris_r"
+    },
+    {
+      "file": "FMA22339.stl",
+      "part": "quadratus_femoris_l"
+    },
+    {
+      "file": "FMA22322.stl",
+      "part": "iliacus_r"
+    },
+    {
+      "file": "FMA22323.stl",
+      "part": "iliacus_l"
+    },
+    {
+      "file": "FMA22342.stl",
+      "part": "psoas_major_r"
+    },
+    {
+      "file": "FMA22343.stl",
+      "part": "psoas_major_l"
+    },
+    {
+      "file": "FMA22354.stl",
+      "part": "sartorius_r"
+    },
+    {
+      "file": "FMA22355.stl",
+      "part": "sartorius_l"
+    },
+    {
+      "file": "FMA43883.stl",
+      "part": "gracilis_r"
+    },
+    {
+      "file": "FMA43884.stl",
+      "part": "gracilis_l"
+    },
+    {
+      "file": "FMA22450.stl",
+      "part": "pectineus_r"
+    },
+    {
+      "file": "FMA22451.stl",
+      "part": "pectineus_l"
+    },
+    {
+      "file": "FMA22456.stl",
+      "part": "adductor_longus_r"
+    },
+    {
+      "file": "FMA22457.stl",
+      "part": "adductor_longus_l"
+    },
+    {
+      "file": "FMA22452.stl",
+      "part": "adductor_brevis_r"
+    },
+    {
+      "file": "FMA22454.stl",
+      "part": "adductor_brevis_l"
+    },
+    {
+      "file": "FMA22459.stl",
+      "part": "adductor_magnus_r"
+    },
+    {
+      "file": "FMA22460.stl",
+      "part": "adductor_magnus_l"
+    },
+    {
+      "file": "FMA22552.stl",
+      "part": "fibularis_longus_r"
+    },
+    {
+      "file": "FMA22553.stl",
+      "part": "fibularis_longus_l"
+    },
+    {
+      "file": "FMA22554.stl",
+      "part": "fibularis_brevis_r"
+    },
+    {
+      "file": "FMA22555.stl",
+      "part": "fibularis_brevis_l"
+    },
+    {
+      "file": "FMA22591.stl",
+      "part": "popliteus_r"
+    },
+    {
+      "file": "FMA22592.stl",
+      "part": "popliteus_l"
+    },
+    {
+      "file": "FMA13295.stl",
+      "part": "diaphragm"
+    },
+    {
+      "file": "FMA49001.stl",
+      "part": "masseter_r"
+    },
+    {
+      "file": "FMA49002.stl",
+      "part": "masseter_l"
+    },
+    {
+      "file": "FMA49007.stl",
+      "part": "temporalis_r"
+    },
+    {
+      "file": "FMA49008.stl",
+      "part": "temporalis_l"
+    },
+    {
+      "file": "FMA22728.stl",
+      "part": "splenius_capitis_r"
+    },
+    {
+      "file": "FMA22729.stl",
+      "part": "splenius_capitis_l"
     }
   ]
 }
